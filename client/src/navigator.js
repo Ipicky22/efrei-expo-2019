@@ -1,23 +1,43 @@
 import React from 'react';
-import Home from './screens/Home'
+
+import ProfilScreen from './screens/Profil'
+import ListProductsScreen from './screens/ListProducts'
+import FavoritesScreen from './screens/Favorites'
+import CreateProductScreen from './screens/CreateProduct'
+
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-const HomeStack = createStackNavigator({
-    Home: {
-        screen: HomeScreen,
-    },
-}, {
-    initialRouteName: 'Home',
-});
+// const HomeStack = createStackNavigator({
+//     Profil: {
+//         screen: ProfilScreen,
+//     },
+//     ListProducts: {
+//         screen: ListProductsScreen,
+//     },
+//     Favorites: {
+//         screen: FavoritesScreen,
+//     },
+//     CreateProduct: {
+//         screen: CreateProductScreen,
+//     }
+// }, {
+//     initialRouteName: 'ListProducts',
+// });
 
 const TabNavigator = createBottomTabNavigator({
-    Home: {
-        screen: HomeStack
+    Profil: {
+        screen: ProfilScreen,
     },
+    ListProducts: {
+        screen: ListProductsScreen,
+    },
+    Favorites: {
+        screen: FavoritesScreen,
+    }
 }, {
-    initialRouteName: 'Home',
+    initialRouteName: 'ListProducts',
 });
 
 const AppContainer = createAppContainer(TabNavigator);
