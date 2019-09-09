@@ -14,8 +14,8 @@ export default ListProducts = ({ navigation }) => {
                 <FlatList
                     data={data.products}
                     keyExtractor={({ id }) => id}
-                    renderItem={({ item: { name, description, price, picture, category } }) => (
-                        <TouchableOpacity>
+                    renderItem={({ item: { name, description, price, picture, category, id, idUser } }) => (
+                        <TouchableOpacity onPress={() => navigation.navigate('DetailProduct', { name, description, price, picture, category, id, idUser })} >
                             <View>
                                 <Text>{name}</Text>
                                 <Text>{description}</Text>
