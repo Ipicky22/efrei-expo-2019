@@ -1,4 +1,5 @@
 import { mergeSchemas } from 'graphql-tools'
+
 //import userSchema from './user'
 import productSchema from './product'
 const schema = mergeSchemas({
@@ -8,3 +9,4 @@ const schema = mergeSchemas({
     ],
 })
 export default schema
+

@@ -18,3 +18,4 @@ export default [
         category: "DBZ",
     }
 ];
+
