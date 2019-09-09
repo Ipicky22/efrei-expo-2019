@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Screen = ({ navigation }) => {
+export default Profil = ({ navigation }) => {
 
     return (
         <View>
@@ -9,8 +9,8 @@ const Screen = ({ navigation }) => {
         </View>
     );
 }
-Screen.navigationOptions = {
-    title: 'Accueil'
+Profil.navigationOptions = {
+    title: 'Profil'
 }
-export default Screen;
+
 
