@@ -1,31 +1,32 @@
-import React, {useState, useEffect} from 'react';
-import { View, Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view'
 import { useQuery } from '@apollo/react-hooks';
 import * as queries from '../apollo/query'
 
 export default ListProducts = ({ navigation }) => {
 
-    const [q, setQ] = useState('')
-    const { loading, error, data } = useQuery(queries.GET_PRODUCTS, {
-        variables: {
-            q: q
-        }
-    });
-
-    console.log("data", data)
+    const { loading, error, data } = useQuery(queries.GET_PRODUCTS);
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            {/* <FlatList
-                data={products}
-                renderItem={({ item: { name } }) => (
-                    <View>
-                        <Text>{name}</Text>
-                    </View>
-                )}
-                keyExtractor={({ id }) => id}
-            /> */}
+            {!loading && !error && (
+                <FlatList
+                    data={data.products}
+                    keyExtractor={({ id }) => id}
+                    renderItem={({ item: { name, description, price, picture, category } }) => (
+                        <TouchableOpacity>
+                            <View>
+                                <Text>{name}</Text>
+                                <Text>{description}</Text>
+                                <Text>{price}</Text>
+                                <Text>{category}</Text>
+                                {/* <Image source={require("../../assets/" + picture )} style={{height: 50, width: 50}} /> */}
+                            </View>
+                        </TouchableOpacity>
+                    )}
+                />
+            )}
         </SafeAreaView>
     );
 }

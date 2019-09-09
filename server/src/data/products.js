@@ -5,7 +5,7 @@ export default [
         description: "La Bataille Galactique",
         price: 10,
         idUser: "1",
-        picture: "/Users/adrien/Desktop/efrei-expo-2019/client/assets/awakening.png",    // à changer ! uniquement pour les tests
+        picture: "awakening.png",    // à changer ! uniquement pour les tests
         category: "DBZ",
     },
     {
@@ -14,7 +14,7 @@ export default [
         description: "La Bataille Galactique",
         price: 10,
         idUser: "1",
-        picture: "/Users/adrien/Desktop/efrei-expo-2019/client/assets/justice.png",    // à changer ! uniquement pour les tests
+        picture: "justice.jpg",    // à changer ! uniquement pour les tests
         category: "DBZ",
     }
 ];
