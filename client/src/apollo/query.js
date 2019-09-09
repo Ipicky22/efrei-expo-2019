@@ -10,6 +10,31 @@ export const GET_PRODUCTS = gql`
         idUser
         picture
         category
+    },
+}`
+
+export const GET_USERS = gql`
+{
+    users {
+        id
+        firstname
+        lastname
+        email
+        address
+        city
+        state
     }
-}
-`
+}`
+
+export const GET_USER = gql`
+query user($id: ID!) {
+    user(id: $id) {
+        id
+        firstname
+        lastname
+        email
+        address
+        city
+        state
+    }
+}`

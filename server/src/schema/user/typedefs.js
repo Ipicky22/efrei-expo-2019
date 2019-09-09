@@ -11,11 +11,11 @@ const typeDefs = /* GraphQL */ `
   # ---
   type User {
     id: ID!
-    firstName: String!
-    lastName: String!
+    firstname: String!
+    lastname: String!
     email: String!
     city: String!
-    adress: String!
+    address: String!
     state: String!
   }
 `
