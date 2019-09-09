@@ -1,6 +1,6 @@
 export default [
     {
-        "id": "5d75fdf12cd053b109849785",
+        "id": "1",
         "firstname": "Fernandez",
         "lastname": "Barker",
         "email": "fernandezbarker@futuris.com",
@@ -10,7 +10,7 @@ export default [
         "favorites": []
     },
     {
-        "id": "5d75fdf1ae5e40573f67f937",
+        "id": "2",
         "firstname": "Claire",
         "lastname": "Dean",
         "email": "clairedean@futuris.com",
@@ -20,7 +20,7 @@ export default [
         "favorites": []
     },
     {
-        "id": "5d75fdf1ca86f8f6990ea4a6",
+        "id": "3",
         "firstname": "Kimberley",
         "lastname": "Flynn",
         "email": "kimberleyflynn@futuris.com",
@@ -30,7 +30,7 @@ export default [
         "favorites": []
     },
     {
-        "id": "5d75fdf1d03bf5b032715edb",
+        "id": "4",
         "firstname": "Marsha",
         "lastname": "Mills",
         "email": "marshamills@futuris.com",
@@ -40,7 +40,7 @@ export default [
         "favorites": []
     },
     {
-        "id": "5d75fdf1bb716b6a8501e134",
+        "id": "5",
         "firstname": "Wendi",
         "lastname": "Rose",
         "email": "wendirose@futuris.com",
