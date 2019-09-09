@@ -1,15 +1,23 @@
 {
     "presets": [
-        "module:metro-react-native-babel-preset"
+        [
+            "env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ]
     ],
     "plugins": [
+        "transform-object-rest-spread",
         [
             "module-resolver",
             {
                 "alias": {
-                    "~": "./src",
-                },
-            },
+                    "~": "./src"
+                }
+            }
         ]
     ]
 }
