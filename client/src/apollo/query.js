@@ -38,3 +38,31 @@ query user($id: ID!) {
         state
     }
 }`
+
+export const SEARCH_PRODUCT = gql`
+query xxx($q: String!) {
+    search(q: $q) {
+        id
+        name
+        description
+        price
+        idUser
+        picture
+        category
+    }
+}
+`
+
+export const MINE_PRODUCT = gql`
+query xxx($q: ID!) {
+    mine(q: $q) {
+        id
+        name
+        description
+        price
+        idUser
+        picture
+        category
+    }
+}
+`

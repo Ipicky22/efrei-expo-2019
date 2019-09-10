@@ -5,7 +5,7 @@ import RootNavigator from './src/navigator';
 
 const client = new ApolloClient({
     // Adrien 9 Septembre
-    uri: 'http://0eb50345.ngrok.io',
+    uri: 'http://d62b93e1.ngrok.io',
 });
 
 const App = () => (

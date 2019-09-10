@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Text, TouchableOpacity, View, Button } from 'react-native';
+import React, { useState, useEffect } from 'react'
+import { Text, View } from 'react-native'
 import SafeAreaView from 'react-native-safe-area-view'
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks'
 import * as queries from '../apollo/query'
 import Separator from '../components/Separator'
+import { Button } from 'native-base';
 
 export default DetailProduct = ({ navigation }) => {
 
@@ -75,9 +76,9 @@ export default DetailProduct = ({ navigation }) => {
                 <View style={{ marginHorizontal: 8 }}>
                     <Text style={{ fontWeight: "600", marginVertical: 2 }}>Currently 10 people are interested in this card.</Text>
                 </View>
-                <View>
-                    <Button title="Follow" />
-                    <Button title="Share" />
+                <View style={{ flexDirection: "row", justifyContent:"space-around"}}>
+                    <Button style={{ flex: 1, justifyContent: "center", marginHorizontal: 16}}><Text>Follow</Text></Button>
+                    <Button style={{ flex: 1, justifyContent: "center", marginHorizontal: 16}}><Text>Share</Text></Button>
                 </View>
             </View>
         </SafeAreaView>
