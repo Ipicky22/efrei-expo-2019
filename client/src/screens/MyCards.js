@@ -1,33 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
+import React, {useState} from 'react';
+import { View, Text, FlatList, TouchableOpacity, } from 'react-native';
+import { Tab, Tabs, TabHeading } from 'native-base';
 import SafeAreaView from 'react-native-safe-area-view'
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery, useMutation } from '@apollo/react-hooks';
 import * as queries from '../apollo/query'
 import Separator from '../components/Separator'
-import { Container, Header, Item, Input, Icon, Button } from 'native-base';
 
-export default ListProducts = ({ navigation }) => {
+export default MyCards = ({ navigation }) => {
+
+    const userId = 1;
 
     const [q, setQ] = useState('')
-    const { loading, error, data } = useQuery(queries.SEARCH_PRODUCT, {
+    const { loading, error, data } = useQuery(queries.MINE_PRODUCT, {
         variables: {
-            q: q
+            q: userId
         }
     });
 
     return (
-        <SafeAreaView style={{ flex: 1 }}>
-
-            <Header searchBar rounded >
-                <Item>
-                    <Icon name="ios-search" />
-                    <Input value={q} onChangeText={v => setQ(v)} placeholder="Search a card..." />
-                </Item>
-            </Header>
-
+        <View style={{ flex: 1 }}>
             {!loading && !error && (
                 <FlatList
-                    data={data.search}
+                    data={data.mine}
                     keyExtractor={({ id }) => id}
                     renderItem={({ item: { name, description, price, picture, category, id, idUser } }) => (
                         <TouchableOpacity onPress={() => navigation.navigate('DetailProduct', { name, description, price, picture, category, id, idUser })} >
@@ -50,10 +44,8 @@ export default ListProducts = ({ navigation }) => {
                     )}
                 />
             )}
-        </SafeAreaView>
+        </View>
     );
 }
-ListProducts.navigationOptions = {
-    title: 'Products'
-}
+
 

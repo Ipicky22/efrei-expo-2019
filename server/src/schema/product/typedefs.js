@@ -5,6 +5,8 @@ const typeDefs = /* GraphQL */ `
   }
   type Query {
     products:[Product!]!
+    search(q: String!): [Product!]!
+    mine(q: ID!): [Product!]!
   }
 
   type Mutation {
