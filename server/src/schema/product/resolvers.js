@@ -19,6 +19,21 @@ const resolvers = {
             return products.filter(({ idUser }) => {
                 return q === idUser
             })
+        } 
+    },
+    Mutation: {
+        addCard: (obj, args, ctx, info) => {
+            const { data } = args
+            let card = {
+                uuid: data.id,
+                name: data.name,
+                description: data.description,
+                price: data.price,
+                picture: data.picture,
+                category: data.category              
+            }
+            products.push(card)
+            return card
         }
     }
 }

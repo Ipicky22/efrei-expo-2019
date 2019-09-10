@@ -1,6 +1,6 @@
 export default [
     {
-        id: "1",
+        uuid: "3e572c03-fe92-402e-b130-3cc3420c724d",
         name: "Awakening Rage Son Goku",
         description: "La Bataille Galactique",
         price: 10,
@@ -9,7 +9,7 @@ export default [
         category: "DRAGON BALL SUPER CARD GAME",
     },
     {
-        id: "2",
+        uuid: "f21e62c6-f40e-4cf3-9745-b94beed29194",
         name: "Son Gohan, Family of Justice",
         description: "La Bataille Galactique",
         price: 10,

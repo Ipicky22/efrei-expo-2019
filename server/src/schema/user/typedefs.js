@@ -22,7 +22,15 @@ const typeDefs = /* GraphQL */ `
     city: String!
     address: String!
     state: String!
+    cards: [Card]
+    favorites:[Card]
   }
+
+  type Card {
+    id:ID!
+    createdByIdUser: ID!
+    title: String!
+  } 
 
   input EditUserInput {
     firstname: String!
