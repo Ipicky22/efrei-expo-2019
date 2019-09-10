@@ -7,9 +7,6 @@ const resolvers = {
         products: async (obj, args, ctx, info) => {
             return products
         }
-        // },
-        // Mutation: {
-        //
     }
 }
 
