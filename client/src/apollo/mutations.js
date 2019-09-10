@@ -13,3 +13,16 @@ export const EDIT_USER = gql`
         }
     }
 `;
+
+export const CREATE_CARD = gql`
+    mutation addCard($id: ID!, $data: addCard!, $idUser: ID!) {
+        addCard(id: $id, data: $data, idUser: $idUser) {
+            id
+            idUser
+			name
+            price
+            description
+            category
+        }
+    }
+`;

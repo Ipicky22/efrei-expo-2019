@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view'
 import { useQuery } from '@apollo/react-hooks';
 import * as queries from '../apollo/query'
 import Separator from '../components/Separator'
-import { Container, Header, Item, Input, Icon, Button } from 'native-base';
+import { Header, Item, Input, Icon } from 'native-base';
 
 export default ListProducts = ({ navigation }) => {
 

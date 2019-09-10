@@ -8,11 +8,11 @@ export default Favorites = ({ navigation }) => {
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <Tabs tabBarUnderlineStyle={{ backgroundColor: "white" }}>
-                <Tab style={{ backgroundColor: "white" }} heading={<TabHeading style={{ backgroundColor: "black" }}><Text style={{ color: "white" }}>My Cards</Text></TabHeading>}>
-                    <MyCards />
+            <Tabs tabBarUnderlineStyle={{ backgroundColor: "black" }}>
+                <Tab heading={<TabHeading><Text>My Cards</Text></TabHeading>}>
+                    <MyCards navigation={navigation} />
                 </Tab>
-                <Tab heading={<TabHeading style={{ backgroundColor: "black" }}><Text style={{ color: "white" }}>My Favorites</Text></TabHeading>}>
+                <Tab heading={<TabHeading ><Text>My Favorites</Text></TabHeading>}>
                 <Text>Tab 2</Text>
                 </Tab>
             </Tabs>

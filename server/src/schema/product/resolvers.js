@@ -19,20 +19,22 @@ const resolvers = {
             return products.filter(({ idUser }) => {
                 return q === idUser
             })
-        } 
+        }
     },
     Mutation: {
         addCard: (obj, args, ctx, info) => {
             const { data } = args
             let card = {
-                uuid: data.id,
+                id: args.id,
+                idUser: args.idUser,
                 name: data.name,
                 description: data.description,
                 price: data.price,
-                picture: data.picture,
-                category: data.category              
+                category: data.category
+                // picture: data.picture,
             }
             products.push(card)
+            
             return card
         }
     }

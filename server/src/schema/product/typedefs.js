@@ -10,16 +10,16 @@ const typeDefs = /* GraphQL */ `
   }
 
   type Mutation {
-    addCard(data: addCard!): Product!
+    addCard(data: addCard!, id: ID!, idUser: ID!): Product!
   }
   
   # ---
 type Product {
-  uuid: ID!
+  id: ID!
   name: String!
   description: String!,
   price: Int!,
-  picture: String!,
+  picture: String,
   category: String!,
   idUser: ID!
 }
@@ -28,7 +28,6 @@ input addCard {
   name: String!,
   description: String!,
   price: Int!,
-  picture: String!,
   category: String!
 }
 `

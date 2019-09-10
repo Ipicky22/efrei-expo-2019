@@ -9,18 +9,9 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-const HomeStack = createStackNavigator({
-    Profil: {
-        screen: ProfilScreen,
-    },
+const ProductsStack = createStackNavigator({
     ListProducts: {
         screen: ListProductsScreen,
-    },
-    Favorites: {
-        screen: FavoritesScreen,
-    },
-    CreateProduct: {
-        screen: CreateProductScreen,
     },
     DetailProduct: {
         screen: DetailProductScreen,
@@ -29,21 +20,29 @@ const HomeStack = createStackNavigator({
     initialRouteName: 'ListProducts',
 });
 
+const CreateStack = createStackNavigator({
+    Favorites: {
+        screen: FavoritesScreen,
+    },
+    CreateProduct: {
+        screen: CreateProductScreen,
+    }
+}, {
+    initialRouteName: 'Favorites',
+});
+
 const TabNavigator = createBottomTabNavigator({
     Profil: {
         screen: ProfilScreen,
     },
-    ListProducts: {
-        screen: ListProductsScreen,
+    Products: {
+        screen: ProductsStack,
     },
-    Favorites: {
-        screen: FavoritesScreen,
-    },
-    DetailProduct: {
-        screen: DetailProductScreen,
+    Create: {
+        screen: CreateStack,
     }
 }, {
-    initialRouteName: 'ListProducts',
+    initialRouteName: 'Products',
 });
 
 const AppContainer = createAppContainer(TabNavigator);
