@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, Image } from 'react-native'
 import SafeAreaView from 'react-native-safe-area-view'
 import { useQuery } from '@apollo/react-hooks'
 import * as queries from '../apollo/query'
@@ -18,7 +18,7 @@ export default DetailProduct = ({ navigation }) => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={{ display: "flex", flex: 1, marginTop: 8 }}>
-                <View style={{ height: 350, width: 200, backgroundColor: "red", margin: 8, alignSelf: "center" }}></View>
+                <Image source={{ uri : `${navigation.getParam('picture')}` }} style={{ height: 350, width: 200, backgroundColor: "red", margin: 8, alignSelf: "center" }} />
                 <View style={{ marginTop: 16, marginHorizontal: 8 }}>
                     <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
                         <Text style={{ fontWeight: "600", marginVertical: 2 }}>Name :</Text>

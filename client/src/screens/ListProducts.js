@@ -33,13 +33,12 @@ export default ListProducts = ({ navigation }) => {
                         <TouchableOpacity onPress={() => navigation.navigate('DetailProduct', { name, description, price, picture, category, id, idUser })} >
                             <>
                                 <View style={{ display: "flex", flex: 1, flexDirection: "row", alignItems: "center" }}>
-                                    <View style={{ height: 100, width: 75, backgroundColor: "red", margin: 8 }}></View>
+                                    <Image source={{ uri : `${picture}` }} style={{height: 100, width: 75, margin: 8}} />
                                     <View style={{ marginLeft: 8 }}>
                                         <Text style={{ fontWeight: "800", marginVertical: 2 }}>{name}</Text>
                                         <Text style={{ fontWeight: "600", marginVertical: 2 }}>{description}</Text>
                                         <Text style={{ fontWeight: "400", marginVertical: 2 }}>Price : {price} Euros</Text>
                                         <Text style={{ fontWeight: "200", marginVertical: 2 }}>{category}</Text>
-                                        {/* <Image source={require("../../assets/" + picture )} style={{height: 50, width: 50}} /> */}
                                     </View>
                                 </View>
                                 <View style={{ marginHorizontal: 8, marginVertical: 4 }}>
