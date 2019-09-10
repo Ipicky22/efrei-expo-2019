@@ -1,4 +1,5 @@
 import users from '~/data/users'
+import products from '~/data/products'
 import Expo from 'expo-server-sdk';
 let expo = new Expo();
 
@@ -26,8 +27,8 @@ const resolvers = {
         state: data.state || users[index].state
         }
         return users.find((user) => user.id === args.id)
-        },
-    }   
+        }
+    },
 }
 
 export default resolvers
