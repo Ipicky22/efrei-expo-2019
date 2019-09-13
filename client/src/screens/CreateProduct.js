@@ -6,6 +6,22 @@ import Input from '../components/Input'
 import { Button } from 'native-base';
 import { useMutation } from '@apollo/react-hooks';
 import * as mutations from '~/apollo/mutations'
+import gql from 'graphql-tag';
+const uuidv4 = require('uuid/v4');
+const GET_PRODUCTS = gql`
+{
+    products {
+        id
+        name
+        description
+        price
+        idUser
+        picture
+        category
+    },
+}`
+
+const generateID = uuidv4()
 
 export default CreateProduct = ({ navigation }) => {
 
@@ -25,13 +41,9 @@ export default CreateProduct = ({ navigation }) => {
     }] = useMutation(mutations.CREATE_CARD);
     
     cardCreator = async () => {
-        console.log(name,
-            description,
-            price,
-            category)
         await addCard({
 			variables: {
-                id: "23456789",
+                id: generateID,
 				idUser: userId,
 				data: {
 					name,
@@ -39,8 +51,9 @@ export default CreateProduct = ({ navigation }) => {
                     price: parseInt(price),
                     category
 				}
-			},
-		});
+            },
+            refetchQueries: [`products`]
+        });
 		navigation.goBack()
     }
 

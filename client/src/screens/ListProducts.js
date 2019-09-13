@@ -14,7 +14,7 @@ export default ListProducts = ({ navigation }) => {
             q: q
         }
     });
-
+    
     return (
         <SafeAreaView style={{ flex: 1 }}>
 

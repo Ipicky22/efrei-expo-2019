@@ -34,7 +34,6 @@ const resolvers = {
                 // picture: data.picture,
             }
             products.push(card)
-            
             return card
         }
     }

@@ -18,7 +18,7 @@ export default [
         category: "DRAGON BALL SUPER CARD GAME",
     },
     {
-        id: "3",
+        id: "1c4c290c-02b7-41f5-828f-d664b759eabe",
         name: "Princess Twilight Sparkle *Time Patrol*",
         description: "Version 2 - Royal Rare",
         price: 20,
