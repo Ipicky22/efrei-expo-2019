@@ -8,6 +8,7 @@ import { useMutation } from '@apollo/react-hooks';
 import * as mutations from '~/apollo/mutations'
 import gql from 'graphql-tag';
 const uuidv4 = require('uuid/v4');
+
 const GET_PRODUCTS = gql`
 {
     products {
@@ -53,8 +54,8 @@ export default CreateProduct = ({ navigation }) => {
 				}
             },
             refetchQueries: [`products`]
-        });
-		navigation.goBack()
+        })
+		.then(navigation.goBack())
     }
 
     return (
