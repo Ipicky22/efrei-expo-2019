@@ -7,6 +7,16 @@ export default [
         "address": "855 Cheever Place",
         "city": "Hackneyville",
         "state": "Nevada, 6811",
+        "cards": [ 
+            {
+                uuid: "3e572c03-fe92-402e-b130-3cc3420c724d",
+                name: "Awakening Rage Son Goku"
+            },
+            {
+                uuid: "f21e62c6-f40e-4cf3-9745-b94beed29194",
+                name: "Son Gohan, Family of Justice"
+            }    
+        ],
         "favorites": []
     },
     {
@@ -17,6 +27,7 @@ export default [
         "address": "279 Etna Street",
         "city": "Cannondale",
         "state": "District Of Columbia, 6211",
+        "cards": [],
         "favorites": []
     },
     {
@@ -27,6 +38,7 @@ export default [
         "address": "880 Berkeley Place",
         "city": "Manchester",
         "state": "Arizona, 4395",
+        "cards": [],
         "favorites": []
     },
     {
@@ -37,6 +49,7 @@ export default [
         "address": "761 Elliott Walk",
         "city": "Lithium",
         "state": "Maine, 2331",
+        "cards": [],
         "favorites": []
     },
     {
@@ -47,6 +60,7 @@ export default [
         "address": "177 Baycliff Terrace",
         "city": "Riverton",
         "state": "Marshall Islands, 7180",
+        "cards": [],
         "favorites": []
     }
 ];
